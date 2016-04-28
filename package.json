@@ -1,0 +1,31 @@
+{
+  "name": "curriculum-vitae",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build-css && node ./node_modules/babel-cli/bin/babel.js src/server --out-dir build && webpack",
+    "build-css": "sass src/style/sass/style.scss ./src/style/built-stylesheet.css",
+    "start": "node build/server.js",
+    "update-schema": "babel-node src/tools/updateSchema.js",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-core": "^6.4.5",
+    "babel-loader": "^6.2.2",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-0": "^6.5.0",
+    "fs": "0.0.2",
+    "webpack": "^1.12.13"
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "react-router": "^2.0.0-rc2",
+  },
+  "author": "Vincent Truchot",
+  "license": "ISC"
+}
