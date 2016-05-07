@@ -38053,7 +38053,7 @@
 	                            _react2.default.createElement(
 	                                'h2',
 	                                null,
-	                                'Education'
+	                                'Formation'
 	                            )
 	                        ),
 	                        _react2.default.createElement(
