@@ -26,22 +26,22 @@ function recompile() {
 
 // run the webpack dev server
 gulp.task('webpack', () => {
-  compiler = webpack(frontendConfig);
-  let server = new WebpackDevServer(compiler, {
-    contentBase: path.join(__dirname, 'src', 'frontend', 'public'),
-    //hot: true,
-    noInfo: true,
-    stats: { colors: true },
-    historyApiFallback: true
-  });
-
-  server.listen(3000, 'localhost', (err, result) => {
-    if (err)
-      return console.error(err);
-    console.log('[webpackDevServer]: listening on localhost:3000');
+  return new Promise((resolve, reject) => {
+    let compiled = false;
+    compiler = webpack(frontendConfig)
+        .watch(100, (err, stats) => {
+          if (err)
+            return reject(err);
+          // trigger task completion after first compile
+          if (!compiled) {
+            compiled = true;
+            resolve();
+          } else {
+            nodemon.restart();
+          }
+        });
   });
 });
-
 
 // restart the backend server whenever a required file from backend is updated
 gulp.task('backend-watch', () => {

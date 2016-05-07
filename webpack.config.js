@@ -31,7 +31,7 @@ var frontendConfig = assign({}, defaultConfig, {
             {
                 exclude: /(node_modules)/,
                 test: /\.js$/,
-                include: path.join(__dirname, 'src', 'frontend'),
+                include: path.join(__dirname, 'src'),
                 loaders: ['react-hot', 'babel']
             },
             {

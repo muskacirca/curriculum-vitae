@@ -30,7 +30,7 @@ class NavBarBox extends React.Component {
                     </a>
 
                     <div href="#" className="header__logo" href="#">
-                        <strong>Vince</strong>
+                        <strong>Vincent Truchot</strong>
                     </div>
                     <nav className="menu">
                         <Link to="/cv" activeClassName="link-active">
