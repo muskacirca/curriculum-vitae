@@ -1,45 +1,13 @@
-/*
- * Base structure
- */
 
-html, body {
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    line-height: 1.4;
-    height: 100%;
-
-    margin: 0;
-    padding: 0;
-}
-
-a {
-    color: #00B7FF;
-    text-decoration: none;
-}
 
 #app {
     height: 100%;
-    overflow: hidden;
+    overflow: hidden
 }
 
 .container {
     overflow: hidden;
     width: 100%;
-}
-
-.site-content {
-    position: absolute;
-    top: 66px;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    padding-top: 0;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-}
-
-.link-active {
-    color: darkred;
-    text-decoration: none;
 }
 
 .pointer {
@@ -55,55 +23,6 @@ a {
 .orange {color: #ff9800;}
 .red {color: #F44336;}
 
-
-/*
-    NAVBAR
-*/
-.header {
-    position: fixed;
-    left: 0;
-    right: 0;
-    height: 66px;
-
-    line-height: 66px;
-
-    color: #FFF;
-    background-color: #333;
-}
-
-.header__logo {
-    color: #D32F2F;
-    font-weight: bold;
-    font-size: 1.4em;
-    padding: 0 25px;
-    float: left;
-}
-
-.header__logo a {
-   text-decoration: none;
-    color: #9d9d9d;
-}
-
-.menu {
-    float: left;
-}
-
-.menu-right a,
-.menu a {
-    padding: 0 10px;
-    text-decoration: none;
-    color: #9d9d9d;
-}
-
-.menu-right a:hover,
-.menu a:hover {
-    color: whitesmoke;
-}
-
-.menu-right {
-    float: right;
-    padding-right: 20px;
-}
 
 /*
     RESPONSIVE

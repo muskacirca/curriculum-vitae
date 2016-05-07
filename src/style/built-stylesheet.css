@@ -1,36 +1,114 @@
-.calendar-month-header {
-  display: flex;
-  justify-content: space-around; }
+/*
+ * Base structure
+ */
+html, body {
+  font-family: "RobotoDraft", "Roboto", sans-serif;
+  line-height: 1.4;
+  height: 100%;
+  margin: 0;
+  padding: 0; }
 
-.calendar-month-row {
-  display: flex;
-  justify-content: space-around; }
+a {
+  color: #009688;
+  text-decoration: none; }
 
-.calendar-row-content {
-  flex: 1; }
+a:hover {
+  color: #CDDC3;
+  text-decoration: none; }
 
-.calendar-days-content {
-  min-height: 50px; }
+h2 {
+  color: #009688; }
 
 .center {
   text-align: center; }
 
-.calendar-days-header,
-.calendar-blank-days,
-.calendar-days {
-  border: 1px solid #90A4AE; }
+.link-active {
+  color: #CDDC3;
+  text-decoration: none; }
 
-.calendar-days-tr-up {
-  text-align: right; }
+.site-content {
+  position: absolute;
+  top: 66px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding-top: 0;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  font-size: 16px; }
 
-.calendar-days-tr-up {
-  font-weight: bold;
-  font-size: 1.5em; }
+.category-header {
+  margin-top: 5px;
+  padding: 5px; }
 
-.input-addon {
-  width: 40px; }
+.category-content {
+  margin-top: 15px;
+  padding: 5px; }
 
-.login-container {
-  margin-top: 33px; }
+.skill-content {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap; }
+
+/*
+    NAVBAR
+*/
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 66px;
+  line-height: 66px;
+  color: #FFF;
+  background-color: #009688;
+  border-bottom: 1px solid #00695C; }
+  .header a:hover {
+    color: #CDDC3; }
+
+.header__logo {
+  color: #E0F2F1;
+  font-size: 1.4em;
+  padding: 0 25px;
+  float: left; }
+  .header__logo a {
+    text-decoration: none;
+    color: #9d9d9d; }
+
+.menu {
+  float: left; }
+
+.menu-right a:hover,
+.menu a:hover {
+  color: whitesmoke; }
+
+.menu-right {
+  float: right;
+  padding-right: 20px; }
+
+.menu-right a,
+.menu a {
+  padding: 0 10px;
+  text-decoration: none;
+  color: #E0F2F1; }
+
+.skill-box {
+  margin-right: 15px;
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 10px;
+  background-color: #E0F2F1;
+  box-shadow: 0.1em 0.1em 0.1em 0.1em #BDBDBD; }
+
+.skill-box-content {
+  word-wrap: break-word; }
+
+.cv-items-date {
+  padding-left: 25px; }
+
+.job-description {
+  padding-left: 10px; }
+
+.cv-item-dates {
+  padding-left: 25px; }
 
 /*# sourceMappingURL=built-stylesheet.css.map */

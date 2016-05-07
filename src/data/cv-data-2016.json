@@ -1,0 +1,187 @@
+{
+  "name": "Vincent Truchot",
+  "language": [
+    {"name": "FR", "skill": "native"},
+    {"name": "EN", "skill": "bon niveau", "certificate": "TOEIC 890"}
+  ],
+  "github": "https://github.com/muskacirca",
+  "jobs": [
+    {
+      "name": "Transatel",
+      "start": "2011",
+      "website": "http://www.transatel.com",
+      "location": "Paris",
+      "shortDescription": "Opérateur mobile virtuel",
+      "description": "Développeur Java, JEE, ReactJS, .NET, Php, SQLServer",
+      "activities": [
+        "Évolution et maintenance de la plateforme",
+        "Environnement Scrum et Xtrem Programing",
+        "Amélioration continue, architecture, réduction de la dette technique"
+      ]
+    },
+    {
+      "name": "Meta4",
+      "start": "2009",
+      "end": "2011",
+      "location": "Paris",
+      "website": "http://www.meta4.com",
+      "shortDescription": "Editeur d’un progiciel intégré Ressource Humaine et Paie",
+      "description": "Consultant technico-fonctionnel",
+      "activities": [
+        "Missions pour des grands compte : France Télévision, RTE, FNCLCC",
+        "Étude d’un cahier des charges, analyse technique, développement des solutions, recette",
+        "Recueil des besoins fonctionnels du client"
+      ]
+    },
+    {
+      "name": "Dreamsoft (Groupe Solucom)",
+      "start": "2008",
+      "end": "2008",
+      "location": "Paris",
+      "website": "http://www.solucom.com",
+      "shortDescription": "Conseil en Gouvernance et Technologie",
+      "description": "Consultant en SOA",
+      "activities": [
+        "Développements Java en environnement IBM WebSphere",
+        "Élaboration d’un état de l’art sur les annuaires de services",
+        "Mise en place d’un annuaire de services, rédaction d’un guide d’exploitation et de bonnes pratiques (Projet opérationnel pour l’INRA)"
+      ]
+    },
+    {
+      "name": "Médiabilis (Groupe Solucom)",
+      "start": "2007",
+      "end": "2007",
+      "location": "Paris",
+      "website": "http://www.mediabilis.com",
+      "shortDescription": "Solutions en téléphonie mobile",
+      "description": "Ingénieur d’étude et de développement",
+      "activities": [
+        "Évolution et maintenance de la plateforme (Java)",
+        "Réalisation de services WAP (J2EE, HTML, CSS)"
+       ]
+    }
+  ],
+  "educations": [
+    {
+      "name": "EFREI",
+      "website": "http://wwww.efrei.fr",
+      "location": "Paris",
+      "shortDescription": "Ecole des Technologies de l’Information appliquées au Management",
+      "start": "2003",
+      "end": "2008",
+      "description": "Master option SI"
+    },
+    {
+      "name": "University College of London",
+      "website": "http://wwww.efrei.fr",
+      "location": "Londres",
+      "start": "2005",
+      "end": "2005",
+      "description": "Anglais, Management, HTML, CSS, PHP"
+    },
+    {
+      "name": "Lycée Frédéric Mistral",
+      "website": "http://wwww.efrei.fr",
+      "location": "Fresnes",
+      "start": "2000",
+      "end": "2003",
+      "description": "Baccalauréat Scientifique avec mention"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Java",
+      "website": "http://www.oracle.com/technetwork/java/index.html",
+      "shortDescription": "JEE, Maven",
+      "frameworks": [
+        {
+          "name": "JEE",
+          "website": "https://facebook.github.io/react/"
+        },
+        {
+          "name": "Maven",
+          "website": "https://maven.apache.org/"
+        }
+      ]
+    },
+    {
+      "name": "Javascript ES2015",
+      "website": "https://fr.wikipedia.org/wiki/ECMAScript#ECMAScript_Edition_6_.28ES6.29",
+      "frameworks": [
+        {
+          "name": "React",
+          "website": "https://facebook.github.io/react/"
+        },
+        {
+          "name": "GraphQL",
+          "website": "http://graphql.org/"
+        },
+        {
+          "name": "Jest",
+          "website": "https://facebook.github.io/jest/"
+        },
+        {
+          "name": "Sequelize",
+          "website": "https://github.com/sequelize/sequelize"
+        },
+        {
+          "name": "Babel",
+          "website": "https://babeljs.io/"
+        },
+        {
+          "name": "Webpack",
+          "website": "https://webpack.github.io/"
+        }
+      ]
+    },
+    {
+      "name": "HTML"
+    },
+    {
+      "name": "CSS",
+      "frameworks": [
+        {
+          "name": "Sass",
+          "website": "http://sass-lang.com/"
+        },
+        {
+          "name": "Bootstrap",
+          "website": "http://getbootstrap.com/"
+        }
+      ]
+    },
+    {
+      "name": "Agilité",
+      "frameworks": [
+        {
+          "name": "Scrum",
+          "website": "https://en.wikipedia.org/wiki/Scrum_(software_development)"
+        },
+        {
+          "name": "Extreme Programing",
+          "website": "https://fr.wikipedia.org/wiki/Extreme_programming"
+        }
+      ]
+    },
+    {
+      "name": "Database",
+      "frameworks": [
+        {
+          "name": "SQL Server",
+          "website": "https://www.microsoft.com/fr-fr/server-cloud/products/sql-server/overview.aspx"
+        },
+        {
+          "name": "MySQL",
+          "website": "https://www.mysql.fr/"
+        }
+      ]
+    },
+    {
+      "name": ".NET"
+    },
+    {
+      "name": "PHP"
+    }
+
+  ]
+}
