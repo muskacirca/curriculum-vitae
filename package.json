@@ -2,7 +2,7 @@
   "name": "curriculum-vitae",
   "version": "1.0.0",
   "description": "Curriculum Vitae de Vincent Truchot",
-  "repository" : "https://github.com/muskacirca/curriculum-vitae.git",
+  "repository": "https://github.com/muskacirca/curriculum-vitae.git",
   "main": "index.js",
   "scripts": {
     "build": "npm run build-css && node ./node_modules/babel-cli/bin/babel.js src/server --out-dir build && webpack",
@@ -18,6 +18,11 @@
     "babel-preset-stage-0": "^6.5.0",
     "fs": "0.0.2",
     "history": "^2.1.1",
+    "html-webpack-plugin": "^2.16.1",
+    "node-sass": "^3.7.0",
+    "nodemon": "^1.9.2",
+    "react-hot-loader": "^1.3.0",
+    "sass-loader": "^3.2.0",
     "webpack": "^1.12.13"
   },
   "dependencies": {
