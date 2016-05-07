@@ -11,8 +11,6 @@ var defaultConfig = {
 var frontendConfig = assign({}, defaultConfig, {
 
     entry: [
-        'webpack-dev-server/client?http://localhost:3000',
-        'webpack/hot/only-dev-server',
         './src/frontend/index.js'
     ],
 
@@ -21,18 +19,13 @@ var frontendConfig = assign({}, defaultConfig, {
         path: path.join(__dirname, 'src', 'frontend', 'public')
     },
 
-    plugins: [
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin()
-
-    ],
     module: {
         loaders: [
             {
                 exclude: /(node_modules)/,
                 test: /\.js$/,
                 include: path.join(__dirname, 'src'),
-                loaders: ['react-hot', 'babel']
+                loaders: ['babel']
             },
             {
                 test: /\.json$/,

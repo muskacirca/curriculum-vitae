@@ -28,8 +28,7 @@ function recompile() {
 gulp.task('webpack', () => {
   return new Promise((resolve, reject) => {
     let compiled = false;
-    compiler = webpack(frontendConfig)
-        .watch(100, (err, stats) => {
+    webpack(frontendConfig).watch(100, (err, stats) => {
           if (err)
             return reject(err);
           // trigger task completion after first compile
@@ -67,8 +66,6 @@ gulp.task('server', ['backend-watch'], () => {
       js: 'node'
     },
     script: path.join(__dirname, 'build', 'server.js'),
-    // do not watch any directory/files to refresh
-    // all refreshes should be manual
     watch: ['foo/'],
     ext: 'noop',
     ignore: ['*']
