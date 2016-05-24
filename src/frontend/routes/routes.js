@@ -1,44 +1,24 @@
 import React from 'react';
 import { IndexRoute, Route } from 'react-router';
 
+import Dashboard from '../components/Dashboard'
 import MainApp from '../components/MainApp'
 import Music from '../components/Music'
-import GitHub from '../components/GitHub'
+import Projects from '../components/Projects'
 import CurriculumVitae from '../components/CurriculumVitae'
 
-var CurriculumVitaeWrapper = React.createClass({
 
-    getInitialState: function() {
-      return {
-
-      }
-    },
-
-    componentDidMount: function() {
-        $.ajax({
-            url: "/data/cv-data-2016.json",
-            dataType: 'json',
-            success: function (response) {
-                this.setState({cv: response})
-            }.bind(this)
-        });
-    },
-
-    render: function() {
-        return <CurriculumVitae cv={this.state.cv} />
-    }
-})
 
 export default  <Route>
                     <Route path="/" component={MainApp} >
 
-                        <IndexRoute component={CurriculumVitaeWrapper} />
+                        <IndexRoute component={Dashboard} />
 
-                        <Route path="github" component={GitHub} />
+                        <Route path="projects" component={Projects} />
 
                         <Route path="music" component={Music} />
 
-                        <Route path="cv" component={CurriculumVitaeWrapper}  />
+                        <Route path="cv" component={CurriculumVitae}  />
 
                     </Route>
                 </Route>

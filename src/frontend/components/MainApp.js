@@ -1,3 +1,5 @@
+'use strict';
+
 import React from 'react'
 
 import NavBarBox from './navbar'
@@ -10,21 +12,25 @@ class MainApp extends React.Component{
 
     constructor(props) {
         super(props);
+        this.state = {
+            toggleDashboard: true
+        }
     }
 
     onHiddenSiteCLick() {
         var className = 'with--sidebar'
         toggleClassInBody(className)
-
     }
 
     render() {
 
+        let style = this.state.toggleDashboard ? "site-content dashboard" : "site-content";
+
         return (
             <div className="site-pusher">
-                <NavBarBox />
-               
-                <div className="site-content">
+                <NavBarBox showDashboard={this.state.toggleDashboard}/>
+
+                <div className={style}>
                     <div className="container">
                         {this.props.children}
                     </div>

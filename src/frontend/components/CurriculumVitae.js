@@ -1,3 +1,5 @@
+'use strict';
+
 import React from 'react'
 import CurriculumVitaeItem from './CurriculumVitaeItem'
 
@@ -49,7 +51,7 @@ class CurriculumVitae extends React.Component {
             var jobs = this.renderJobs(cv.jobs, "jobs")
             var educations = this.renderJobs(cv.educations, "educations")
             var skills = this.renderSkill(cv.skills)
-            return  <div className="">
+            return  <div className="page-content">
                         <div className="category-container">
                             <div className="category-header">
                                 <h2>Expériences professionelles</h2>
@@ -77,4 +79,25 @@ class CurriculumVitae extends React.Component {
     }
 }
 
-export default CurriculumVitae
+export default React.createClass({
+
+    getInitialState: function() {
+        return {
+
+        }
+    },
+
+    componentDidMount: function() {
+        $.ajax({
+            url: "/data/cv-data-2016.json",
+            dataType: 'json',
+            success: function (response) {
+                this.setState({cv: response})
+            }.bind(this)
+        });
+    },
+
+    render: function() {
+        return <CurriculumVitae cv={this.state.cv} />
+    }
+});

@@ -8,6 +8,14 @@ html, body {
   margin: 0;
   padding: 0; }
 
+#app {
+  height: 100%;
+  overflow: hidden; }
+
+.container {
+  overflow: hidden;
+  width: 100%; }
+
 a {
   color: #009688;
   text-decoration: none; }
@@ -15,6 +23,9 @@ a {
 a:hover {
   color: #CDDC3;
   text-decoration: none; }
+
+.pointer {
+  cursor: pointer; }
 
 h2 {
   color: #009688; }
@@ -36,6 +47,9 @@ h2 {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   font-size: 16px; }
+
+.page-content {
+  margin-top: 15px; }
 
 .category-header {
   margin-top: 5px;
@@ -61,9 +75,35 @@ h2 {
   line-height: 66px;
   color: #FFF;
   background-color: #009688;
-  border-bottom: 1px solid #00695C; }
+  border-bottom: 1px solid #00695C;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); }
   .header a:hover {
     color: #CDDC3; }
+
+.header__icon {
+  display: none; }
+
+header.header.dashboard {
+  position: relative;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column; }
+
+.dashboard .header__logo {
+  float: none;
+  align-self: center; }
+.dashboard .menu {
+  display: flex;
+  align-self: center; }
+.dashboard .header__icon {
+  display: flex;
+  align-self: center; }
+
+.site-content.dashboard {
+  position: inherit;
+  top: 350px; }
 
 .header__logo {
   color: #E0F2F1;
@@ -91,6 +131,81 @@ h2 {
   text-decoration: none;
   color: #E0F2F1; }
 
+/*
+    RESPONSIVE
+*/
+@media only screen and (max-width: 750px) {
+  .header {
+    position: static; }
+
+  .site-content {
+    position: absolute;
+    top: 66px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding-top: 0;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden; }
+
+  .site-pusher {
+    height: 100%;
+    transition-duration: 0.3s;
+    transform: translateX(0px); }
+
+  .header__icon {
+    position: relative;
+    display: block;
+    float: left;
+    cursor: pointer;
+    width: 50px;
+    height: 66px; }
+
+  .header__icon:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 16px;
+    height: 0px;
+    top: 16px;
+    left: 15px;
+    box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white; }
+
+  .menu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #333;
+    width: 250px;
+    z-index: 10;
+    transform: translateX(-250px); }
+
+  .menu a {
+    display: block;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 40px;
+    border-bottom: 1px solid whitesmoke; }
+
+  .with--sidebar .site-pusher {
+    transform: translateX(250px); }
+
+  .with--sidebar .site-cache {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6); }
+
+  .mobile-hide {
+    display: none; } }
+/* ****************************************************
+                    END OF NAVBAR
+* *************************************************** */
 .skill-box {
   margin-right: 15px;
   margin-bottom: 15px;

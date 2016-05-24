@@ -5,6 +5,38 @@
     {"name": "EN", "skill": "bon niveau", "certificate": "TOEIC 890"}
   ],
   "github": "https://github.com/muskacirca",
+  "projects": [
+    {
+      "name": "LRDS",
+      "position": "owner",
+      "website": "http://lrds.herokuapp.com",
+      "shortDescription": "Projet de gestion de stock pour la Resourcerie du Spectacle",
+      "image": "style/images/lrds-logo-300px.jpg",
+      "description": "La resourcerie du spectacle est un organisme qui récupère et répare du matériel du spectacle son et lumières. Ils proposent également des prestations et ont donc bersoin d'un outil de gestion de stock pour suivre l'évolution du matériel au quotidien et pouvoir émettre des factures ",
+      "activities": [
+      ]
+    },
+    {
+      "name": "curriculum-vitae",
+      "position": "owner",
+      "website": "https://github.com/muskacirca/curriculum-vitae",
+      "image": "style/images/curriculum-vitae.jpeg",
+      "shortDescription": "Projet de site cv open-source",
+      "description": "Pour mettre son cv en ligne y'a pas mieux ...",
+      "activities": [
+      ]
+    },
+    {
+      "name": "JeeShop",
+      "position": "contributor",
+      "website": "http://jeeshop.org/#",
+      "image": "style/images/jeeshop.jpg",
+      "shortDescription": "Projet de boutique en ligne open-source",
+      "description": "Jeeshop est une solution e-commerce facilitant la mise en oeuvre de votre boutique en ligne. Elle comprend un outil d'administration, Jeeshop-Admin, ainsi qu'un ensemble d'APIs REST capables de gérer l'ensemble des operations e-commerce de votre front-end.",
+      "activities": [
+      ]
+    }
+  ],
   "jobs": [
     {
       "name": "Transatel",
