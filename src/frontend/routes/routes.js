@@ -7,10 +7,22 @@ import Music from '../components/Music'
 import Projects from '../components/Projects'
 import CurriculumVitae from '../components/CurriculumVitae'
 
+const App = React.createClass({
+    displayName: 'App',
 
+    render() {
+        let toggleDashboard = this.props.location.pathname == "/" ? true : false;
+        console.log("in route " + this.props.location.pathname + ", toggleDashboard " + toggleDashboard);
+        return React.cloneElement(
+            <MainApp />,
+            {toggleDashboard: toggleDashboard, 
+                children: this.props.children}
+        );
+    }
+});
 
 export default  <Route>
-                    <Route path="/" component={MainApp} >
+                    <Route path="/" component={App} >
 
                         <IndexRoute component={Dashboard} />
 

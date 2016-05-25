@@ -12,9 +12,6 @@ class MainApp extends React.Component{
 
     constructor(props) {
         super(props);
-        this.state = {
-            toggleDashboard: true
-        }
     }
 
     onHiddenSiteCLick() {
@@ -23,12 +20,12 @@ class MainApp extends React.Component{
     }
 
     render() {
-
-        let style = this.state.toggleDashboard ? "site-content dashboard" : "site-content";
+        
+        let style = this.props.toggleDashboard ? "site-content dashboard" : "site-content";
 
         return (
             <div className="site-pusher">
-                <NavBarBox showDashboard={this.state.toggleDashboard}/>
+                <NavBarBox showDashboard={this.props.toggleDashboard} />
 
                 <div className={style}>
                     <div className="container">
