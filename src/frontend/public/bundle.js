@@ -38023,7 +38023,7 @@
 	                    { className: 'row' },
 	                    _react2.default.createElement(
 	                        'div',
-	                        { className: 'col-md-10 col-md-offset-1' },
+	                        { className: 'col-md-8 col-md-offset-2' },
 	                        projects
 	                    )
 	                )
@@ -38164,56 +38164,64 @@
 	                    { className: 'page-content' },
 	                    _react2.default.createElement(
 	                        'div',
-	                        { className: 'category-container' },
+	                        { className: 'row' },
 	                        _react2.default.createElement(
 	                            'div',
-	                            { className: 'category-header' },
+	                            { className: 'col-md-8 col-md-offset-2' },
 	                            _react2.default.createElement(
-	                                'h2',
-	                                null,
-	                                'Expériences professionelles'
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'category-content' },
-	                            jobs
-	                        )
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'category-container' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'category-header' },
+	                                'div',
+	                                { className: 'category-container' },
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'category-header' },
+	                                    _react2.default.createElement(
+	                                        'h2',
+	                                        null,
+	                                        'Expériences professionelles'
+	                                    )
+	                                ),
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'category-content' },
+	                                    jobs
+	                                )
+	                            ),
 	                            _react2.default.createElement(
-	                                'h2',
-	                                null,
-	                                'Formation'
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'category-content' },
-	                            educations
-	                        )
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'category-container' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'category-header' },
+	                                'div',
+	                                { className: 'category-container' },
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'category-header' },
+	                                    _react2.default.createElement(
+	                                        'h2',
+	                                        null,
+	                                        'Formation'
+	                                    )
+	                                ),
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'category-content' },
+	                                    educations
+	                                )
+	                            ),
 	                            _react2.default.createElement(
-	                                'h2',
-	                                null,
-	                                'Compétences informatique'
+	                                'div',
+	                                { className: 'category-container' },
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'category-header' },
+	                                    _react2.default.createElement(
+	                                        'h2',
+	                                        null,
+	                                        'Compétences informatique'
+	                                    )
+	                                ),
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'skill-content' },
+	                                    skills
+	                                )
 	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'skill-content' },
-	                            skills
 	                        )
 	                    )
 	                );
@@ -38329,12 +38337,12 @@
 	                { className: 'row' },
 	                _react2.default.createElement(
 	                    'div',
-	                    { className: 'col-sm-2 col-xs-12 col-md-2 cv-item-dates' },
+	                    { className: 'col-sm-2 col-xs-12 col-md-3 cv-item-dates' },
 	                    computedDate
 	                ),
 	                _react2.default.createElement(
 	                    'div',
-	                    { className: 'col-sm-10 col-xs-12 col-md-10 cv-item-content' },
+	                    { className: 'col-sm-10 col-xs-12 col-md-9 cv-item-content' },
 	                    _react2.default.createElement(
 	                        'div',
 	                        { className: 'col-sm-12 col-xs-12 col-md-12' },

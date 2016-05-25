@@ -52,26 +52,31 @@ class CurriculumVitae extends React.Component {
             var educations = this.renderJobs(cv.educations, "educations")
             var skills = this.renderSkill(cv.skills)
             return  <div className="page-content">
-                        <div className="category-container">
-                            <div className="category-header">
-                                <h2>Expériences professionelles</h2>
+                        <div className="row">
+                            <div className="col-md-8 col-md-offset-2">
+                                <div className="category-container">
+                                    <div className="category-header">
+                                        <h2>Expériences professionelles</h2>
+                                    </div>
+                                    <div className="category-content">{jobs}</div>
+                                </div>
+                                <div className="category-container">
+                                    <div className="category-header">
+                                        <h2>Formation</h2>
+                                    </div>
+                                    <div className="category-content">
+                                        {educations}
+                                    </div>
+                                </div>
+                                <div className="category-container">
+                                    <div className="category-header"><h2>Compétences informatique</h2></div>
+                                    <div className="skill-content">
+                                        {skills}
+                                    </div>
+                                </div>
                             </div>
-                            <div className="category-content">{jobs}</div>
                         </div>
-                        <div className="category-container">
-                            <div className="category-header">
-                                <h2>Formation</h2>
-                            </div>
-                            <div className="category-content">
-                                {educations}
-                            </div>
-                        </div>
-                        <div className="category-container">
-                            <div className="category-header"><h2>Compétences informatique</h2></div>
-                            <div className="skill-content">
-                                {skills}
-                            </div>
-                        </div>
+                       
                     </div>
         } else {
             return <div></div>

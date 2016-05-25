@@ -31,10 +31,10 @@ class CurriculumVitaeItem extends React.Component {
         var computedDate = this.computeDate(item.start, item.end)
 
         return  <div className="row">
-                    <div className="col-sm-2 col-xs-12 col-md-2 cv-item-dates">
+                    <div className="col-sm-2 col-xs-12 col-md-3 cv-item-dates">
                         {computedDate}
                     </div>
-                    <div className="col-sm-10 col-xs-12 col-md-10 cv-item-content">
+                    <div className="col-sm-10 col-xs-12 col-md-9 cv-item-content">
                         <div className="col-sm-12 col-xs-12 col-md-12">
                             <b><a target="_blank" href={item.website}>{item.name}</a></b>, {item.shortDescription}
                         </div>

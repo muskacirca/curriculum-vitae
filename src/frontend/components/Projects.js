@@ -36,7 +36,7 @@ class Projects extends React.Component {
 
         return  <div className="page-content">
                     <div className="row">
-                        <div className="col-md-10 col-md-offset-1">
+                        <div className="col-md-8 col-md-offset-2">
                             {projects}    
                         </div>
                     </div>
