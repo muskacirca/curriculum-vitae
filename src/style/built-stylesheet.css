@@ -84,14 +84,18 @@ h2 {
 .header__icon {
   display: none; }
 
-.header.dashboard {
-  position: relative;
-  height: 350px;
+.header__display {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
   flex-direction: column;
+  justify-content: space-around;
+  height: 100%; }
+
+header.header.dashboard {
+  height: 350px;
   transition: height 0.4s; }
+
+.header__img {
+  display: none; }
 
 .dashboard .header__logo {
   float: none;

@@ -25432,48 +25432,52 @@
 	                    onClick: this.handleClick.bind(this) }, 'href', '#')),
 	                _react2.default.createElement(
 	                    'div',
-	                    _defineProperty({ href: '#', className: 'header__logo' }, 'href', '#'),
+	                    { className: 'header__display' },
 	                    _react2.default.createElement(
-	                        _reactRouter.Link,
-	                        { to: '/' },
+	                        'div',
+	                        _defineProperty({ href: '#', className: 'header__logo' }, 'href', '#'),
 	                        _react2.default.createElement(
-	                            'strong',
-	                            null,
-	                            'Vincent Truchot'
+	                            _reactRouter.Link,
+	                            { to: '/' },
+	                            _react2.default.createElement(
+	                                'strong',
+	                                null,
+	                                'Vincent Truchot'
+	                            )
 	                        )
-	                    )
-	                ),
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'header__img' },
-	                    _react2.default.createElement('img', { src: 'style/images/avatar.png', className: 'img-circle img-responsive' })
-	                ),
-	                _react2.default.createElement(
-	                    'nav',
-	                    { className: 'menu' },
-	                    _react2.default.createElement(
-	                        _reactRouter.Link,
-	                        { to: '/cv', activeClassName: 'link-active', onClick: this.closeMenu.bind(this) },
-	                        _react2.default.createElement('i', { className: 'fa fa-2x fa-graduation-cap', 'aria-hidden': 'true' }),
-	                        ' CV '
 	                    ),
 	                    _react2.default.createElement(
-	                        _reactRouter.Link,
-	                        { to: '/projects', activeClassName: 'link-active', onClick: this.closeMenu.bind(this) },
-	                        _react2.default.createElement('i', { className: 'fa fa-2x fa-code-fork', 'aria-hidden': 'true' }),
-	                        ' Projets'
+	                        'div',
+	                        { className: 'header__img' },
+	                        _react2.default.createElement('img', { src: 'style/images/avatar.png', className: 'img-circle img-responsive' })
 	                    ),
 	                    _react2.default.createElement(
-	                        'a',
-	                        { target: '_blank', href: 'https://github.com/muskacirca', activeClassName: 'link-active', onClick: this.closeMenu.bind(this) },
-	                        _react2.default.createElement('i', { className: 'fa fa-2x fa-github', 'aria-hidden': 'true' }),
-	                        " GitHub"
-	                    ),
-	                    _react2.default.createElement(
-	                        'a',
-	                        { target: '_blank', href: 'https://soundcloud.com/muskacirca', activeClassName: 'link-active', onClick: this.closeMenu.bind(this) },
-	                        _react2.default.createElement('i', { className: 'fa fa-2x fa-soundcloud', 'aria-hidden': 'true' }),
-	                        ' SoundCloud'
+	                        'nav',
+	                        { className: 'menu' },
+	                        _react2.default.createElement(
+	                            _reactRouter.Link,
+	                            { to: '/cv', activeClassName: 'link-active', onClick: this.closeMenu.bind(this) },
+	                            _react2.default.createElement('i', { className: 'fa fa-2x fa-graduation-cap', 'aria-hidden': 'true' }),
+	                            ' CV '
+	                        ),
+	                        _react2.default.createElement(
+	                            _reactRouter.Link,
+	                            { to: '/projects', activeClassName: 'link-active', onClick: this.closeMenu.bind(this) },
+	                            _react2.default.createElement('i', { className: 'fa fa-2x fa-code-fork', 'aria-hidden': 'true' }),
+	                            ' Projets'
+	                        ),
+	                        _react2.default.createElement(
+	                            'a',
+	                            { target: '_blank', href: 'https://github.com/muskacirca', activeClassName: 'link-active', onClick: this.closeMenu.bind(this) },
+	                            _react2.default.createElement('i', { className: 'fa fa-2x fa-github', 'aria-hidden': 'true' }),
+	                            " GitHub"
+	                        ),
+	                        _react2.default.createElement(
+	                            'a',
+	                            { target: '_blank', href: 'https://soundcloud.com/muskacirca', activeClassName: 'link-active', onClick: this.closeMenu.bind(this) },
+	                            _react2.default.createElement('i', { className: 'fa fa-2x fa-soundcloud', 'aria-hidden': 'true' }),
+	                            ' SoundCloud'
+	                        )
 	                    )
 	                )
 	            );

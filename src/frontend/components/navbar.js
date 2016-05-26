@@ -35,36 +35,40 @@ class NavBarBox extends React.Component {
                     <a href="#" className="header__icon" id="header__icon"
                        onClick={this.handleClick.bind(this)} href="#">
                     </a>
-
-                    <div href="#" className="header__logo" href="#">
-                        <Link to="/">
-                            <strong>Vincent Truchot</strong>
-                        </Link>
-                    </div>
             
-                    <div className="header__img">
-                        <img src="style/images/avatar.png" className="img-circle img-responsive" />
+                    <div className="header__display">
+                        <div href="#" className="header__logo" href="#">
+                            <Link to="/">
+                                <strong>Vincent Truchot</strong>
+                            </Link>
+                        </div>
+        
+                        <div className="header__img">
+                            <img src="style/images/avatar.png" className="img-circle img-responsive" />
+                        </div>
+        
+                        <nav className="menu">
+                            <Link to="/cv" activeClassName="link-active" onClick={this.closeMenu.bind(this)}>
+                                <i className="fa fa-2x fa-graduation-cap" aria-hidden="true"/>
+                                {' CV '}
+                            </Link>
+                            <Link to="/projects" activeClassName="link-active" onClick={this.closeMenu.bind(this)}>
+                                <i className="fa fa-2x fa-code-fork" aria-hidden="true"/>
+                                {' Projets'}
+                            </Link>
+                            <a target="_blank" href="https://github.com/muskacirca" activeClassName="link-active" onClick={this.closeMenu.bind(this)}>
+                                <i className="fa fa-2x fa-github" aria-hidden="true" />
+                                {" GitHub"}
+                            </a>
+                            <a target="_blank" href="https://soundcloud.com/muskacirca" activeClassName="link-active" onClick={this.closeMenu.bind(this)}>
+                                <i className="fa fa-2x fa-soundcloud" aria-hidden="true"/>
+                                {' SoundCloud'}
+                            </a>
+                        </nav>
                     </div>
-            
-                    <nav className="menu">
-                        <Link to="/cv" activeClassName="link-active" onClick={this.closeMenu.bind(this)}>
-                            <i className="fa fa-2x fa-graduation-cap" aria-hidden="true"/>
-                            {' CV '}
-                        </Link>
-                        <Link to="/projects" activeClassName="link-active" onClick={this.closeMenu.bind(this)}>
-                            <i className="fa fa-2x fa-code-fork" aria-hidden="true"/>
-                            {' Projets'}
-                        </Link>
-                        <a target="_blank" href="https://github.com/muskacirca" activeClassName="link-active" onClick={this.closeMenu.bind(this)}>
-                            <i className="fa fa-2x fa-github" aria-hidden="true" />
-                            {" GitHub"}
-                        </a>
-                        <a target="_blank" href="https://soundcloud.com/muskacirca" activeClassName="link-active" onClick={this.closeMenu.bind(this)}>
-                            <i className="fa fa-2x fa-soundcloud" aria-hidden="true"/>
-                            {' SoundCloud'}
-                        </a>
-                    </nav>
-                </header>
+                </header>  
+        
+        
 
 
     }
