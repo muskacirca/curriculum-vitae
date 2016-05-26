@@ -109,6 +109,8 @@ h2 {
 
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 
+  transition: height 0.4s;
+
   a:hover {
     color: $link-active-color;
   }
@@ -125,6 +127,11 @@ header.header.dashboard{
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
+  transition: height 0.4s;
+}
+
+.header__img {
+  display: none;
 }
 
 .dashboard {
@@ -135,14 +142,17 @@ header.header.dashboard{
   }
 
   .menu {
-    display: flex;
     align-self: center;
   }
 
   .header__icon {
+
+
+  }
+
+  .header__img {
     display: flex;
     align-self: center;
-
   }
 }
 
@@ -210,7 +220,6 @@ header.header.dashboard{
   }
 
   .header__icon {
-    position: relative;
     display: block;
     float: left;
 
@@ -218,6 +227,15 @@ header.header.dashboard{
 
     width: 50px;
     height: 66px;
+  }
+
+  .header__img {
+    display: none;
+  }
+
+  .header__img.dashboard {
+    display: flex;
+    align-self: center;
   }
 
   .header__icon:after {

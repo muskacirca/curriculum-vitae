@@ -20390,7 +20390,6 @@
 	 * - **             Consumes (greedy) all characters up to the next character
 	 *                  in the pattern, or to the end of the URL if there is none
 	 *
-	 *  The function calls callback(error, matched) when finished.
 	 * The return value is an object with the following properties:
 	 *
 	 * - remainingPathname
@@ -23193,17 +23192,13 @@
 	  // Only try to match the path if the route actually has a pattern, and if
 	  // we're not just searching for potential nested absolute paths.
 	  if (remainingPathname !== null && pattern) {
-	    try {
-	      var matched = (0, _PatternUtils.matchPattern)(pattern, remainingPathname);
-	      if (matched) {
-	        remainingPathname = matched.remainingPathname;
-	        paramNames = [].concat(paramNames, matched.paramNames);
-	        paramValues = [].concat(paramValues, matched.paramValues);
-	      } else {
-	        remainingPathname = null;
-	      }
-	    } catch (error) {
-	      callback(error);
+	    var matched = (0, _PatternUtils.matchPattern)(pattern, remainingPathname);
+	    if (matched) {
+	      remainingPathname = matched.remainingPathname;
+	      paramNames = [].concat(paramNames, matched.paramNames);
+	      paramValues = [].concat(paramValues, matched.paramValues);
+	    } else {
+	      remainingPathname = null;
 	    }
 	
 	    // By assumption, pattern is non-empty here, which is the prerequisite for
@@ -23839,15 +23834,13 @@
 	};
 	
 	module.exports = function hoistNonReactStatics(targetComponent, sourceComponent) {
-	    if (typeof sourceComponent !== 'string') { // don't hoist over string (html) components
-	        var keys = Object.getOwnPropertyNames(sourceComponent);
-	        for (var i=0; i<keys.length; ++i) {
-	            if (!REACT_STATICS[keys[i]] && !KNOWN_STATICS[keys[i]]) {
-	                try {
-	                    targetComponent[keys[i]] = sourceComponent[keys[i]];
-	                } catch (error) {
+	    var keys = Object.getOwnPropertyNames(sourceComponent);
+	    for (var i=0; i<keys.length; ++i) {
+	        if (!REACT_STATICS[keys[i]] && !KNOWN_STATICS[keys[i]]) {
+	            try {
+	                targetComponent[keys[i]] = sourceComponent[keys[i]];
+	            } catch (error) {
 	
-	                }
 	            }
 	        }
 	    }
@@ -25343,6 +25336,7 @@
 	    _createClass(MainApp, [{
 	        key: 'onHiddenSiteCLick',
 	        value: function onHiddenSiteCLick() {
+	            console.log("helloo");
 	            var className = 'with--sidebar';
 	            (0, _utils.toggleClassInBody)(className);
 	        }
@@ -25418,8 +25412,12 @@
 	        key: 'handleClick',
 	        value: function handleClick(e) {
 	            e.preventDefault();
-	            var className = 'with--sidebar';
-	            (0, _utils.toggleClassInBody)(className);
+	            (0, _utils.toggleClassInBody)('with--sidebar');
+	        }
+	    }, {
+	        key: 'closeMenu',
+	        value: function closeMenu(e) {
+	            (0, _utils.removeClassInBodyIfNeed)('with--sidebar');
 	        }
 	    }, {
 	        key: 'render',
@@ -25430,6 +25428,8 @@
 	            return _react2.default.createElement(
 	                'header',
 	                { className: style },
+	                _react2.default.createElement('a', _defineProperty({ href: '#', className: 'header__icon', id: 'header__icon',
+	                    onClick: this.handleClick.bind(this) }, 'href', '#')),
 	                _react2.default.createElement(
 	                    'div',
 	                    _defineProperty({ href: '#', className: 'header__logo' }, 'href', '#'),
@@ -25444,35 +25444,34 @@
 	                    )
 	                ),
 	                _react2.default.createElement(
-	                    'a',
-	                    _defineProperty({ href: '#', className: 'header__icon', id: 'header__icon',
-	                        onClick: this.handleClick.bind(this) }, 'href', '#'),
-	                    _react2.default.createElement('img', { src: 'style/images/avatar.png', className: 'img-circle' })
+	                    'div',
+	                    { className: 'header__img' },
+	                    _react2.default.createElement('img', { src: 'style/images/avatar.png', className: 'img-circle img-responsive' })
 	                ),
 	                _react2.default.createElement(
 	                    'nav',
 	                    { className: 'menu' },
 	                    _react2.default.createElement(
 	                        _reactRouter.Link,
-	                        { to: '/cv', activeClassName: 'link-active' },
+	                        { to: '/cv', activeClassName: 'link-active', onClick: this.closeMenu.bind(this) },
 	                        _react2.default.createElement('i', { className: 'fa fa-2x fa-graduation-cap', 'aria-hidden': 'true' }),
 	                        ' CV '
 	                    ),
 	                    _react2.default.createElement(
 	                        _reactRouter.Link,
-	                        { to: '/projects', activeClassName: 'link-active' },
+	                        { to: '/projects', activeClassName: 'link-active', onClick: this.closeMenu.bind(this) },
 	                        _react2.default.createElement('i', { className: 'fa fa-2x fa-code-fork', 'aria-hidden': 'true' }),
 	                        ' Projets'
 	                    ),
 	                    _react2.default.createElement(
 	                        'a',
-	                        { target: '_blank', href: 'https://github.com/muskacirca', activeClassName: 'link-active' },
+	                        { target: '_blank', href: 'https://github.com/muskacirca', activeClassName: 'link-active', onClick: this.closeMenu.bind(this) },
 	                        _react2.default.createElement('i', { className: 'fa fa-2x fa-github', 'aria-hidden': 'true' }),
 	                        " GitHub"
 	                    ),
 	                    _react2.default.createElement(
 	                        'a',
-	                        { target: '_blank', href: 'https://soundcloud.com/muskacirca', activeClassName: 'link-active' },
+	                        { target: '_blank', href: 'https://soundcloud.com/muskacirca', activeClassName: 'link-active', onClick: this.closeMenu.bind(this) },
 	                        _react2.default.createElement('i', { className: 'fa fa-2x fa-soundcloud', 'aria-hidden': 'true' }),
 	                        ' SoundCloud'
 	                    )
@@ -25490,12 +25489,13 @@
 /* 225 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
 	exports.toggleClassInBody = toggleClassInBody;
+	exports.removeClassInBodyIfNeed = removeClassInBodyIfNeed;
 	
 	var _lodash = __webpack_require__(226);
 	
@@ -25506,8 +25506,17 @@
 	function toggleClassInBody(className) {
 	
 	    var bodyClass = document.body.className;
-	    var bodyClass = bodyClass.indexOf(className) == -1 ? addSafely(bodyClass, className) : replaceSafely(bodyClass, className);
+	    bodyClass = bodyClass.indexOf(className) == -1 ? addSafely(bodyClass, className) : removeSafely(bodyClass, className);
 	
+	    document.body.className = bodyClass;
+	}
+	
+	function removeClassInBodyIfNeed(className) {
+	
+	    var bodyClass = document.body.className;
+	    bodyClass = bodyClass.indexOf(className) != -1 ? removeSafely(bodyClass, className) : bodyClass;
+	
+	    console.log("body class: " + bodyClass);
 	    document.body.className = bodyClass;
 	}
 	
@@ -25515,7 +25524,7 @@
 	    return bodyClass.length > 0 ? " " + className : className;
 	}
 	
-	function replaceSafely(bodyClass, className) {
+	function removeSafely(bodyClass, className) {
 	    var str = bodyClass === className ? className : " " + className;
 	
 	    return _lodash2.default.replace(bodyClass, str, '');

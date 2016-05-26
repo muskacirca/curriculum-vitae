@@ -15,12 +15,13 @@ class MainApp extends React.Component{
     }
 
     onHiddenSiteCLick() {
+        console.log("helloo")
         var className = 'with--sidebar'
         toggleClassInBody(className)
     }
 
     render() {
-        
+
         let style = this.props.toggleDashboard ? "site-content dashboard" : "site-content";
 
         return (

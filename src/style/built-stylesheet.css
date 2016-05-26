@@ -76,28 +76,29 @@ h2 {
   color: #FFF;
   background-color: #009688;
   border-bottom: 1px solid #00695C;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); }
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: height 0.4s; }
   .header a:hover {
     color: #CDDC3; }
 
 .header__icon {
   display: none; }
 
-header.header.dashboard {
+.header.dashboard {
   position: relative;
   height: 350px;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  flex-direction: column; }
+  flex-direction: column;
+  transition: height 0.4s; }
 
 .dashboard .header__logo {
   float: none;
   align-self: center; }
 .dashboard .menu {
-  display: flex;
   align-self: center; }
-.dashboard .header__icon {
+.dashboard .header__img {
   display: flex;
   align-self: center; }
 
@@ -155,12 +156,18 @@ header.header.dashboard {
     transform: translateX(0px); }
 
   .header__icon {
-    position: relative;
     display: block;
     float: left;
     cursor: pointer;
     width: 50px;
     height: 66px; }
+
+  .header__img {
+    display: none; }
+
+  .header__img.dashboard {
+    display: flex;
+    align-self: center; }
 
   .header__icon:after {
     content: '';
