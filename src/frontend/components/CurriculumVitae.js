@@ -41,10 +41,6 @@ class CurriculumVitae extends React.Component {
                                         {educations}
                                     </div>
                                 </div>
-                                <div className="category-container">
-                                    <div className="category-header"><h2>Compétences informatique</h2></div>
-                                    
-                                </div>
                             </div>
                         </div>
                        

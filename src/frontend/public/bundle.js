@@ -42159,20 +42159,17 @@
 	                                    'div',
 	                                    { className: 'media-heading' },
 	                                    _react2.default.createElement(
-	                                        'div',
-	                                        { className: '' },
+	                                        'h4',
+	                                        null,
 	                                        _react2.default.createElement(
 	                                            'a',
-	                                            { className: 'inline__text', href: p.website },
-	                                            _react2.default.createElement(
-	                                                'h4',
-	                                                null,
-	                                                p.name
-	                                            )
+	                                            { href: p.website },
+	                                            p.name
 	                                        ),
+	                                        ' ',
 	                                        _react2.default.createElement(
 	                                            'span',
-	                                            { className: 'inline__text label label-default' },
+	                                            { className: 'label label-default' },
 	                                            p.position
 	                                        )
 	                                    )
@@ -42340,19 +42337,6 @@
 	                                    'div',
 	                                    { className: 'category-content' },
 	                                    educations
-	                                )
-	                            ),
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'category-container' },
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'category-header' },
-	                                    _react2.default.createElement(
-	                                        'h2',
-	                                        null,
-	                                        'Compétences informatique'
-	                                    )
 	                                )
 	                            )
 	                        )

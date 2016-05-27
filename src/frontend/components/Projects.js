@@ -20,11 +20,12 @@ class Projects extends React.Component {
                                 </div>
                                 <div className="media-body">
                                     <div className="media-heading">
-                                        <div className="">
-                                            <a className="inline__text" href={p.website}><h4>{p.name}</h4></a>
-                                            <span className="inline__text label label-default">{p.position}</span>
-                                        </div>
+                                        <h4>
+                                            <a href={p.website}>{p.name }</a>{' '}
+                                            <span className="label label-default">{p.position}</span>
+                                        </h4>
                                     </div>
+
                                     <p>{p.shortDescription}</p>
                                     <p>{p.description}</p>
 
