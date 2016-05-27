@@ -11,7 +11,7 @@ class Projects extends React.Component {
     renderProjects(projects) {
         if(projects) {
             return projects.map((p, id) => {
-                return  <div key={"projects-list-" + id} className="">
+                return  <div key={"projects-list-" + id} className="project-container">
                             <div className="media">
                                 <div className="media-left">
                                     <a href="#">

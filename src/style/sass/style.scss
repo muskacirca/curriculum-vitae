@@ -66,6 +66,10 @@ h2 {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   font-size: 16px;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s cubic-bezier(0.67, 0.13, 1, 1);
+
 }
 
 
@@ -120,11 +124,15 @@ h2 {
   display: none;
 }
 
-.header__display {
+.dashboard .header__display {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   height: 100%;
+}
+
+.header__display {
+  display: block;
 }
 
 header.header.dashboard{
@@ -159,7 +167,7 @@ header.header.dashboard{
 }
 
 .site-content.dashboard {
-  position: inherit;
+  position: absolute;
   top: 350px;
 }
 
@@ -169,9 +177,10 @@ header.header.dashboard{
   padding: 0 25px;
   float: left;
 
+
   a {
     text-decoration: none;
-    color: #9d9d9d;
+    color: #E0F2F1;
   }
 }
 .menu {
@@ -302,7 +311,15 @@ header.header.dashboard{
   padding: 12px;
   border-radius: 10px;
   background-color: #E0F2F1;
-  box-shadow: 0.1em 0.1em 0.1em 0.1em #BDBDBD;
+
+  -moz-box-shadow: 0.1px 0.1px 10px 0px rgba(101, 101, 101, 0.61);
+  -webkit-box-shadow: 0.1px 0.1px 10px 0px rgba(101, 101, 101, 0.61);
+  -o-box-shadow: 0.1px 0.1px 10px 0px rgba(101, 101, 101, 0.61);
+  box-shadow: 0.1px 0.1px 8px 0px rgba(101, 101, 101, 0.61);
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=rgba(101, 101, 101, 0.61), Direction=134, Strength=10);
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
 }
 
 .skill-box-content {
@@ -319,4 +336,13 @@ header.header.dashboard{
 
 .cv-item-dates {
   padding-left: 25px;
+}
+
+.project-container {
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.dashboard-container {
+  text-align: center;
 }

@@ -25283,16 +25283,104 @@
 	    }
 	
 	    _createClass(Dashboard, [{
+	        key: 'renderFrameworks',
+	        value: function renderFrameworks(skill) {
+	            if (skill.frameworks) {
+	                return skill.frameworks.map(function (framework, key) {
+	                    return _react2.default.createElement(
+	                        'li',
+	                        { key: framework.name + "-" + skill.name },
+	                        _react2.default.createElement(
+	                            'strong',
+	                            null,
+	                            _react2.default.createElement(
+	                                'a',
+	                                { target: '_blank', href: framework.website },
+	                                framework.name
+	                            )
+	                        )
+	                    );
+	                });
+	            }
+	        }
+	    }, {
+	        key: 'renderSkill',
+	        value: function renderSkill(skills) {
+	            var _this2 = this;
+	
+	            if (skills) {
+	                return skills.map(function (skill, key) {
+	                    var frameworks = _this2.renderFrameworks(skill);
+	                    return _react2.default.createElement(
+	                        'div',
+	                        { className: 'skill-box', key: "skill" + key },
+	                        skill.name,
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'skill-box-content' },
+	                            _react2.default.createElement(
+	                                'ul',
+	                                { className: 'list-inline' },
+	                                frameworks
+	                            )
+	                        )
+	                    );
+	                });
+	            }
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
-	            return _react2.default.createElement('div', null);
+	
+	            var cv = this.props.cv;
+	            var skills = cv ? this.renderSkill(cv.skills) : null;
+	
+	            return _react2.default.createElement(
+	                'div',
+	                { className: 'row' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'dashboard-container col-md-8 col-md-offset-2' },
+	                    _react2.default.createElement(
+	                        'h2',
+	                        null,
+	                        'Dévelopeur Fullstack (7 ans d\'expériences)'
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'skill-content' },
+	                        skills
+	                    )
+	                )
+	            );
 	        }
 	    }]);
 	
 	    return Dashboard;
 	}(_react2.default.Component);
 	
-	exports.default = Dashboard;
+	exports.default = _react2.default.createClass({
+	    displayName: 'Dashboard',
+	
+	
+	    getInitialState: function getInitialState() {
+	        return {};
+	    },
+	
+	    componentDidMount: function componentDidMount() {
+	        $.ajax({
+	            url: "/data/cv-data-2016.json",
+	            dataType: 'json',
+	            success: function (response) {
+	                this.setState({ cv: response });
+	            }.bind(this)
+	        });
+	    },
+	
+	    render: function render() {
+	        return _react2.default.createElement(Dashboard, { cv: this.state.cv });
+	    }
+	});
 
 /***/ },
 /* 223 */
@@ -42051,7 +42139,7 @@
 	                return projects.map(function (p, id) {
 	                    return _react2.default.createElement(
 	                        'div',
-	                        { key: "projects-list-" + id, className: '' },
+	                        { key: "projects-list-" + id, className: 'project-container' },
 	                        _react2.default.createElement(
 	                            'div',
 	                            { className: 'media' },
@@ -42187,52 +42275,6 @@
 	            });
 	        }
 	    }, {
-	        key: 'renderFrameworks',
-	        value: function renderFrameworks(skill) {
-	            if (skill.frameworks) {
-	                return skill.frameworks.map(function (framework, key) {
-	                    return _react2.default.createElement(
-	                        'li',
-	                        { key: framework.name + "-" + skill.name },
-	                        _react2.default.createElement(
-	                            'strong',
-	                            null,
-	                            _react2.default.createElement(
-	                                'a',
-	                                { target: '_blank', href: framework.website },
-	                                framework.name
-	                            )
-	                        )
-	                    );
-	                });
-	            }
-	        }
-	    }, {
-	        key: 'renderSkill',
-	        value: function renderSkill(skills) {
-	            var _this2 = this;
-	
-	            if (skills) {
-	                return skills.map(function (skill, key) {
-	                    var frameworks = _this2.renderFrameworks(skill);
-	                    return _react2.default.createElement(
-	                        'div',
-	                        { className: 'skill-box', key: "skill" + key },
-	                        skill.name,
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'skill-box-content' },
-	                            _react2.default.createElement(
-	                                'ul',
-	                                { className: 'list-inline' },
-	                                frameworks
-	                            )
-	                        )
-	                    );
-	                });
-	            }
-	        }
-	    }, {
 	        key: 'render',
 	        value: function render() {
 	
@@ -42241,7 +42283,7 @@
 	            if (cv) {
 	                var jobs = this.renderJobs(cv.jobs, "jobs");
 	                var educations = this.renderJobs(cv.educations, "educations");
-	                var skills = this.renderSkill(cv.skills);
+	
 	                return _react2.default.createElement(
 	                    'div',
 	                    { className: 'page-content' },
@@ -42298,11 +42340,6 @@
 	                                        null,
 	                                        'Compétences informatique'
 	                                    )
-	                                ),
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'skill-content' },
-	                                    skills
 	                                )
 	                            )
 	                        )

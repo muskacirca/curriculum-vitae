@@ -14,34 +14,7 @@ class CurriculumVitae extends React.Component {
             return <CurriculumVitaeItem key={type + key} item={job} />
         })
     }
-
-    renderFrameworks(skill) {
-        if(skill.frameworks) {
-            return skill.frameworks.map((framework ,key) => {
-                return <li key={framework.name + "-" + skill.name}>
-                            <strong>
-                                <a target="_blank" href={framework.website}>{framework.name}</a>
-                            </strong>
-                        </li>
-            })
-        }
-    }
-
-    renderSkill(skills) {
-        if(skills) {
-            return  skills.map((skill, key) => {
-                var frameworks = this.renderFrameworks(skill)
-                return  <div className="skill-box" key={"skill" + key}>
-                            {skill.name}
-                            <div className="skill-box-content">
-                                <ul className="list-inline">
-                                    {frameworks}
-                                </ul>
-                            </div>
-                        </div>
-            })
-        }
-    }
+    
 
     render() {
 
@@ -50,7 +23,7 @@ class CurriculumVitae extends React.Component {
         if(cv) {
             var jobs = this.renderJobs(cv.jobs, "jobs")
             var educations = this.renderJobs(cv.educations, "educations")
-            var skills = this.renderSkill(cv.skills)
+            
             return  <div className="page-content">
                         <div className="row">
                             <div className="col-md-8 col-md-offset-2">
@@ -70,9 +43,7 @@ class CurriculumVitae extends React.Component {
                                 </div>
                                 <div className="category-container">
                                     <div className="category-header"><h2>Compétences informatique</h2></div>
-                                    <div className="skill-content">
-                                        {skills}
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
