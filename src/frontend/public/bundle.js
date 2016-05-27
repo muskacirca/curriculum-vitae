@@ -42148,7 +42148,7 @@
 	                                { className: 'media-left' },
 	                                _react2.default.createElement(
 	                                    'a',
-	                                    { href: '#' },
+	                                    { target: '_blank', href: p.website },
 	                                    _react2.default.createElement('img', { className: 'media-object img-rounded', src: p.image, alt: p.name })
 	                                )
 	                            ),
@@ -42163,7 +42163,7 @@
 	                                        null,
 	                                        _react2.default.createElement(
 	                                            'a',
-	                                            { href: p.website },
+	                                            { target: '_blank', href: p.website },
 	                                            p.name
 	                                        ),
 	                                        ' ',

@@ -14,14 +14,14 @@ class Projects extends React.Component {
                 return  <div key={"projects-list-" + id} className="project-container">
                             <div className="media">
                                 <div className="media-left">
-                                    <a href="#">
+                                    <a target="_blank" href={p.website}>
                                         <img className="media-object img-rounded" src={p.image} alt={p.name} />
                                     </a>
                                 </div>
                                 <div className="media-body">
                                     <div className="media-heading">
                                         <h4>
-                                            <a href={p.website}>{p.name }</a>{' '}
+                                            <a target="_blank" href={p.website}>{p.name }</a>{' '}
                                             <span className="label label-default">{p.position}</span>
                                         </h4>
                                     </div>
