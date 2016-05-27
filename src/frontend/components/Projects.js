@@ -19,10 +19,15 @@ class Projects extends React.Component {
                                     </a>
                                 </div>
                                 <div className="media-body">
-                                    <a href={p.website}><h4 className="media-heading">{p.name}</h4></a>
+                                    <div className="media-heading">
+                                        <div className="">
+                                            <a className="inline__text" href={p.website}><h4>{p.name}</h4></a>
+                                            <span className="inline__text label label-default">{p.position}</span>
+                                        </div>
+                                    </div>
                                     <p>{p.shortDescription}</p>
                                     <p>{p.description}</p>
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -37,7 +42,7 @@ class Projects extends React.Component {
         return  <div className="page-content">
                     <div className="row">
                         <div className="col-md-8 col-md-offset-2">
-                            {projects}    
+                            {projects}
                         </div>
                     </div>
                 </div>

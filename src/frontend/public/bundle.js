@@ -42156,12 +42156,25 @@
 	                                'div',
 	                                { className: 'media-body' },
 	                                _react2.default.createElement(
-	                                    'a',
-	                                    { href: p.website },
+	                                    'div',
+	                                    { className: 'media-heading' },
 	                                    _react2.default.createElement(
-	                                        'h4',
-	                                        { className: 'media-heading' },
-	                                        p.name
+	                                        'div',
+	                                        { className: '' },
+	                                        _react2.default.createElement(
+	                                            'a',
+	                                            { className: 'inline__text', href: p.website },
+	                                            _react2.default.createElement(
+	                                                'h4',
+	                                                null,
+	                                                p.name
+	                                            )
+	                                        ),
+	                                        _react2.default.createElement(
+	                                            'span',
+	                                            { className: 'inline__text label label-default' },
+	                                            p.position
+	                                        )
 	                                    )
 	                                ),
 	                                _react2.default.createElement(
