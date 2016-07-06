@@ -42296,7 +42296,7 @@
 	
 	                return _react2.default.createElement(
 	                    'div',
-	                    { className: 'page-content' },
+	                    { id: 'cvContent', className: 'page-content' },
 	                    _react2.default.createElement(
 	                        'div',
 	                        { className: 'row' },

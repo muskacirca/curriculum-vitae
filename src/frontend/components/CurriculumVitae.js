@@ -14,17 +14,16 @@ class CurriculumVitae extends React.Component {
             return <CurriculumVitaeItem key={type + key} item={job} />
         })
     }
-    
 
     render() {
 
-        var cv = this.props.cv
+        let cv = this.props.cv
 
         if(cv) {
-            var jobs = this.renderJobs(cv.jobs, "jobs")
-            var educations = this.renderJobs(cv.educations, "educations")
-            
-            return  <div className="page-content">
+            let jobs = this.renderJobs(cv.jobs, "jobs")
+            let educations = this.renderJobs(cv.educations, "educations")
+
+            return  <div id="cvContent" className="page-content">
                         <div className="row">
                             <div className="col-md-8 col-md-offset-2">
                                 <div className="category-container">
@@ -43,7 +42,6 @@ class CurriculumVitae extends React.Component {
                                 </div>
                             </div>
                         </div>
-                       
                     </div>
         } else {
             return <div></div>

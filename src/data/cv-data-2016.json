@@ -10,10 +10,12 @@
       "name": "LRDS",
       "position": "owner",
       "website": "http://lrds.herokuapp.com",
-      "shortDescription": "Projet de gestion de stock pour la Resourcerie du Spectacle",
+      "shortDescription": "Outil de gestion de stock pour la Resourcerie du Spectacle",
       "image": "style/images/lrds-logo-300px.jpg",
-      "description": "La resourcerie du spectacle est un organisme qui récupère et répare du matériel du spectacle son et lumières. Ils proposent également des prestations et ont donc bersoin d'un outil de gestion de stock pour suivre l'évolution du matériel au quotidien et pouvoir émettre des factures ",
+      "description": "La Resourcerie du Spectacle est une association qui valorise et partage des savoirs et des resources, par la collecte et le réemploi de matériel et de matériaux, dans le but de proposer des solutions techniques responsables et favoriser de nouvelles formes de création artistique.",
       "activities": [
+        "ReactJS",
+        "GraphQL"
       ]
     },
     {
@@ -24,6 +26,7 @@
       "shortDescription": "Projet de site cv open-source",
       "description": "Pour mettre son cv en ligne y'a pas mieux ...",
       "activities": [
+        "ReactJS"
       ]
     },
     {
@@ -34,6 +37,8 @@
       "shortDescription": "Projet de boutique en ligne open-source",
       "description": "Jeeshop est une solution e-commerce facilitant la mise en oeuvre de votre boutique en ligne. Elle comprend un outil d'administration, Jeeshop-Admin, ainsi qu'un ensemble d'APIs REST capables de gérer l'ensemble des operations e-commerce de votre front-end.",
       "activities": [
+        "AngularJS",
+        "Java EE"
       ]
     }
   ],
@@ -44,8 +49,9 @@
       "website": "http://www.transatel.com",
       "location": "Paris",
       "shortDescription": "Opérateur mobile virtuel",
-      "description": "Développeur Java, JEE, ReactJS, .NET, Php, SQLServer",
+      "description": "Ingénieur d’étude et de développement",
       "activities": [
+        "Techno: Java, JEE, ReactJS, .NET, Php, SQLServer",
         "Évolution et maintenance de la plateforme",
         "Environnement Scrum et Xtrem Programing",
         "Amélioration continue, architecture, réduction de la dette technique"
@@ -60,6 +66,7 @@
       "shortDescription": "Editeur d’un progiciel intégré Ressource Humaine et Paie",
       "description": "Consultant technico-fonctionnel",
       "activities": [
+        "Techno: Meta4Object, Oracle",
         "Missions pour des grands compte : France Télévision, RTE, FNCLCC",
         "Étude d’un cahier des charges, analyse technique, développement des solutions, recette",
         "Recueil des besoins fonctionnels du client"
@@ -74,6 +81,7 @@
       "shortDescription": "Conseil en Gouvernance et Technologie",
       "description": "Consultant en SOA",
       "activities": [
+        "Techno: Java, HTML, CSS",
         "Développements Java en environnement IBM WebSphere",
         "Élaboration d’un état de l’art sur les annuaires de services",
         "Mise en place d’un annuaire de services, rédaction d’un guide d’exploitation et de bonnes pratiques (Projet opérationnel pour l’INRA)"
@@ -88,8 +96,9 @@
       "shortDescription": "Solutions en téléphonie mobile",
       "description": "Ingénieur d’étude et de développement",
       "activities": [
-        "Évolution et maintenance de la plateforme (Java)",
-        "Réalisation de services WAP (J2EE, HTML, CSS)"
+        "Techno : Java, JEE, HTML, CSS",
+        "Évolution et maintenance de la plateforme",
+        "Réalisation de services WAP"
        ]
     }
   ],
@@ -101,7 +110,7 @@
       "shortDescription": "Ecole des Technologies de l’Information appliquées au Management",
       "start": "2003",
       "end": "2008",
-      "description": "Master option SI"
+      "description": "Master option SI, Diplôme reconnu par la Commission des Titres d'Ingénieur"
     },
     {
       "name": "University College of London",
